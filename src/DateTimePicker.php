@@ -145,7 +145,7 @@ class DateTimePicker extends InputWidget
 			],
 		], $this->options);
 		// Ensure that containerOptions array contains an id key
-		$this->containerOptions['id'] = $this->containerOptions['id'] ?: $this->getId();
+		$this->containerOptions['id'] = ($this->containerOptions['id'] ?? null) ?: $this->getId();
 		// Ensure default CSS class for the widget container
 		Html::addCssClass($this->containerOptions, 'datetimepicker');
 		// Ensure default CSS class for the input control
